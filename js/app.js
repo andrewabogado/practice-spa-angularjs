@@ -8,7 +8,7 @@ window.addEventListener('hashchange', function() {
     console.log('Going to page 2');
   }
 
-  if (window.loation.hash === '#/bookmark/3') {
+  if (window.location.hash === '#/bookmark/3') {
     console.log('Lets start with 3');
   }
 
