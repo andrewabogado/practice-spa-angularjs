@@ -20,8 +20,12 @@ myApp.config(function ($routeProvider) {
 
 myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
 
+  $scope.name = "main";
+
 }]);
 
 myApp.controller('secondController', ['$scope', '$log', function($scope, $log) {
+
+  $scope.name = "second";
 
 }]);
