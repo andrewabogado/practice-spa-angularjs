@@ -1,9 +1,27 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.controller('mainController', ['$scope', '$location', '$log',
+myApp.config(function ($routeProvider) {
 
-  function($scope, $location, $log) {
-    $log.info($location.path());
-  }
+  $routeProvider
 
-]);
+  // AngularJS will look for when the hash changes, checked the routes, find which one matches, and find the appropriate code.
+  .when('/', {
+    // route to page and controller when it's an empty hash (/)
+    templateUrl: 'pages/main.html',
+    controller: 'mainController'
+  })
+
+  .when('/second', {
+    templateUrl: 'pages/second.html',
+    controller: 'secondController'
+  })
+
+})
+
+myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
+
+}]);
+
+myApp.controller('secondController', ['$scope', '$log', function($scope, $log) {
+
+}]);
